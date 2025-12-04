@@ -1,0 +1,908 @@
+/* Custom Styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0px;
+  padding: 0px;
+  border: 30px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 25px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Starting of Style */
+
+html {
+  border-left: 30px solid #331C23;
+  border-right: 30px solid #331C23;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  /* prevents offset from sticky navbar */
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+
+/* Navigation */
+
+.nav-logo {
+  height: 50px;
+  /* adjust size */
+  width: auto;
+  position: absolute;
+  left: 20px;
+  /* space from left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1200;
+}
+
+.nav-logo:hover {
+  background: #f6dde5;
+  border-radius: 15px;
+}
+
+/* Checkbox Hidden */
+#menu-toggle {
+  display: none;
+}
+
+/* Navigation Background */
+.navi {
+  position: sticky;
+  top: 0;
+  background-color: #331C23;
+  padding: 2.5rem;
+  z-index: 9999;
+}
+
+
+/* Hamburger container */
+.hamburger {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 35px;
+  height: 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+/* Hamburger lines */
+.hamburger span {
+  height: 4px;
+  background: #CF6D8C;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.hamburger:hover {
+  background: #ffd0df;
+  border-radius: 5px;
+}
+
+/* Navigation panel */
+.nav {
+  font-size: 1rem;
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100vh;
+  background: #331C23;
+  padding-top: 60px;
+  transition: 0.3s ease;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+  /* makes it responsive */
+}
+
+.graphic-gallery {
+  text-align: center;
+  padding: 40px;
+  background-color: #fdfdfd;
+}
+
+.graphic-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #4a2e2a;
+}
+
+.graphic-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.graphic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #4a2e2a;
+}
+
+.graphic-item img {
+  width: 250px;
+  /* ⬅ SCALE DOWN HERE */
+  height: 250px;
+  object-fit: cover;
+  border: 8px solid black;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.graphic-item:hover img {
+  transform: scale(1.05);
+}
+
+.graphic-item p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .graphic-item img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+/* HEART SHAPE */
+.about-photo {
+  width: 300px;
+  height: 300px;
+  clip-path: path("M150 290 Q90 240 50 200 Q10 160 10 110 Q10 60 45 30 Q80 0 120 20 Q150 35 150 70 Q150 35 180 20 Q220 0 255 30 Q290 60 290 110 Q290 160 250 200 Q210 240 150 290 Z");
+  overflow: hidden;
+  border: 10px solid #331C23;
+  /* BROWN BORDER */
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section {
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  color: #331C23;
+  /* brown text */
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-section h2 {
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #331C23;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #a46d79;
+  /* cute dusty pink */
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.contact-email:hover {
+  color: #331C23;
+  border-bottom: 2px solid #331C23;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  background: #ffffff4c;
+}
+
+/* Slide-out when checked */
+#menu-toggle:checked~.nav {
+  right: 0;
+}
+
+/* --- Animated X effect --- */
+#menu-toggle:checked+.hamburger span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked+.hamburger span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+/* End of Navigation */
+
+/* First Slide */
+
+/* Container Size */
+.firstslide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  /* full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Image Size */
+.firstslide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+/* ZOOM Transition */
+.zero img {
+  transform: scale(0.8);
+  animation: zoomIn 1.2s ease forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* End of First Slide*/
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.frontpage {
+  background: #331c23;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-bottom: 3rem;
+  color: #331C23;
+  font-size: 5rem;
+  font-family: "ff-cocon-pro-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 3px 3px 10px #00000042;
+}
+
+
+.one {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 600px;
+  background: white;
+  padding: 50px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: 0.5rem;
+  border-radius: 30px 120px 120px 30px;
+  /* pink border of image */
+  border-right: 12px solid #CF6D8C;
+  /* shadow of border */
+  box-shadow: 0 0 15px #331C23;
+  /* font */
+  color: #4a2f38;
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: justify;
+}
+
+.two {
+  width: 100%;
+  max-width: 600px;
+  /* prevents it from getting too big */
+  height: 80vh;
+  /* scales with screen height */
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+/* slideshow parent */
+.two.slideshow {
+  position: relative;
+  /* required for absolutely positioned slides */
+  height: 80vh;
+  /* adjust this if you want it taller/shorter */
+  max-width: 700px;
+  /* prevents it from getting too wide on large screens */
+  margin: 0 auto;
+  overflow: hidden;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  box-sizing: border-box;
+}
+
+
+/* slides styling */
+.two.slideshow .slide {
+  position: absolute;
+  inset: 0;
+  /* top:0; left:0; right:0; bottom:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* cover the area while keeping aspect */
+  opacity: 0;
+  z-index: 0;
+  animation: slideFade 12s infinite;
+  animation-fill-mode: both;
+}
+
+/* stagger timing for each slide (3 slides = 12s loop; 4s visible each) */
+.two.slideshow .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.two.slideshow .slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.two.slideshow .slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.two.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* keeps the same clean layout */
+}
+
+
+/*.two .slideshow {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+} */
+
+.firstpage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* firstpage slideshow */
+
+
+/* --- PURE CSS SLIDESHOW --- */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  animation: fadeShow 12s infinite;
+}
+
+/* Each image shows for 4s in a 12s loop */
+.slideshow .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow .slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slideshow .slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/* Fade animation */
+@keyframes fadeShow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.title h1 {
+  color: #ffffff !important;
+}
+
+.gallery-title h1 {
+  color: #ffffff !important;
+}
+
+.category {
+  background-image: url("/images/category-background.png");
+  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  scroll-snap-align: start;
+  border-top: 1rem solid #808080;
+  /* color and thickness */
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  /* stack heading over buttons */
+  justify-content: center;
+  /* vertical center */
+  align-items: center;
+  /* horizontal center */
+  text-align: center;
+}
+
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  /* centers buttons horizontally */
+  align-items: center;
+  /* aligns items in middle */
+  flex-wrap: wrap;
+  /* responsive wrapping */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+.cat-btn {
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: #331C23;
+  color: white;
+  border: none;
+  padding: 2.2rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.cat-btn:hover {
+  background: #CF6D8C;
+  transform: translateY(-4px);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item {
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-page {
+  background: #331C23;
+  /* your brown color */
+  min-height: 100vh;
+  /* makes it cover whole screen */
+  padding: 40px 20px;
+}
+
+.gallery-title {
+  padding: 3%;
+  font-size: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  font-family: "kohinoor-telugu", sans-serif;
+  font-weight: 700;
+  color: #331C23;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-decoration: none;
+
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+
+/* Footer styles */
+
+.cute-footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #331C23;
+  /* soft pastel from your theme */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 5rem;
+}
+
+.cute-footer p {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px #A67589;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 600px) {
+  .hamburger {
+    width: 28px;
+    height: 22px;
+  }
+
+  .hamburger span {
+    height: 3px;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav {
+    width: 220px;
+    /* slide panel also shrinks */
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .firstslide {
+    height: 70vh;
+    /* shorter on phones */
+  }
+
+  /* fade-out gradient at bottom */
+  .firstslide::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    /* size of fade */
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 100%);
+    pointer-events: none;
+    /* ignores clicks */
+  }
+}
+
+
+
+/* fade keyframes */
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  6% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  36% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+/* hide any stray images inside .two that aren't slides */
+.two.slideshow img:not(.slide) {
+  display: none !important;
+}
+
+/* RESPONSIVE: stack into column on small screens */
+@media (max-width: 768px) {
+  .frontpage {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .one,
+  .two.slideshow {
+    width: 100%;
+    max-width: none;
+  }
+
+  .two.slideshow {
+    height: 40vh;
+    border-radius: 40px;
+  }
+
+  .two.slideshow .slide {
+    object-fit: contain;
+  }
+}
+
+/* optional: make slideshow a bit smaller on very large screens */
+@media (min-width: 1600px) {
+  .two.slideshow {
+    max-width: 900px;
+  }
+}
+
+/* Navigation */
+@media screen and (max-width: 600px) {
+  .navi {
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-item img {
+    max-width: 180px;
+    border-width: 6px;
+  }
+
+  .gallery-item {
+    max-width: 200px;
+  }
+}
