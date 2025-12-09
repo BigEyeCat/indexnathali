@@ -662,7 +662,7 @@ h1 {
 }
 
 .category {
-  background-image: url("images/category-background.png");
+  background-image: url("../images/category-background.png");
   height: 100vh;
   min-height: 100vh;
   height: auto;
